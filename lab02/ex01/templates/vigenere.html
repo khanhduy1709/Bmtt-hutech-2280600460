@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vigenere Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center; font-weight: bold;">VIGENERE CIPHER</h2>
+        <h4 style="color: blue">MÃ HÓA</h4>
+        <form method="POST" action="/vigenere/encrypt">
+            <div class="mb-3">
+                <label class="form-label">Văn bản gốc:</label>
+                <input type="text" class="form-control" name="plain_text" placeholder="Nhập văn bản gốc" required autofocus/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Khóa:</label>
+                <input type="text" class="form-control" name="key" placeholder="Nhập khóa" required/>
+            </div>
+            <button type="submit" class="btn btn-primary">Mã hóa</button>
+        </form>
+
+        <h4 style="color: blue; margin-top: 30px;">GIẢI MÃ</h4>
+        <form method="POST" action="/vigenere/decrypt">
+            <div class="mb-3">
+                <label class="form-label">Văn bản mã hóa:</label>
+                <input type="text" class="form-control" name="cipher_text" placeholder="Nhập văn bản mã hóa" required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Khóa:</label>
+                <input type="text" class="form-control" name="key" placeholder="Nhập khóa" required/>
+            </div>
+            <button type="submit" class="btn btn-success">Giải mã</button>
+        </form>
+    </div>
+</body>
+</html>
